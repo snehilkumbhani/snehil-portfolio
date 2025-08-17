@@ -114,24 +114,25 @@ export default function Projects() {
               </div>
             </div>
 
-            <div className="flex gap-3 mt-auto">
-              <a
-               href={project.github || "#"}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-1 text-center text-sm px-3 py-2 bg-gray-200 dark:bg-gray-700 text-black dark:text-white rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition"
-              >
-              GitHub
+           <div className="flex gap-3 mt-auto">
+            <a
+             href={project.links.github || "#"}
+             target="_blank"
+             rel="noopener noreferrer"
+             className="flex-1 text-center text-sm px-3 py-2 bg-gray-200 dark:bg-gray-700 text-black dark:text-white rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition"
+            >
+            GitHub
               </a>
-              <a
-                href={project.live || "#"}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex-1 text-center text-sm px-3 py-2 bg-blue-500  dark:bg-gray-700 text-black font-semibold rounded-lg hover:bg-blue-600 transition"
-              >
-              Live Demo
-              </a>
-              </div>
+            <a
+            href={project.links.live || "#"}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-1 text-center text-sm px-3 py-2 bg-blue-500 dark:bg-gray-700 text-black font-semibold rounded-lg hover:bg-blue-600 transition"
+            >
+            Live Demo
+            </a>
+           </div>
+
           </motion.div>
         ))}
       </motion.div>
