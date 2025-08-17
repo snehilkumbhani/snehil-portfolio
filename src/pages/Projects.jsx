@@ -54,19 +54,20 @@ export default function Projects() {
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
         {/* Search */}
        <input
-          type="text"
-          placeholder="Search projects..."
-          value={searchTerm}
-          onChange={(e) => {
-            etSearchTerm(e.target.value);
-            setCurrentPage(1);
-          }}
-          className="border rounded-xl px-4 py-2 w-full md:w-1/3 
-             bg-white text-black 
-             dark:bg-gray-900 dark:text-white 
-             placeholder-gray-500 dark:placeholder-gray-400 
+       type="text"
+       placeholder="Search projects..."
+       value={searchTerm}
+       onChange={(e) => {
+          setSearchTerm(e.target.value);
+          setCurrentPage(1);
+        }}
+       className="border rounded-xl px-4 py-2 w-full md:w-1/3
+             bg-white text-black
+             dark:bg-gray-900 dark:text-white
+             placeholder-gray-500 dark:placeholder-gray-400
+             border-gray-300 dark:border-gray-600
              focus:outline-none focus:ring-2 focus:ring-blue-500"
-      />
+        />
         {/* Sort */}
         <select
           value={sortBy}
@@ -126,14 +127,14 @@ export default function Projects() {
             >
             GitHub
               </a>
-            <a
+            {/* <a
             href={project.links.live || "#"}
             target="_blank"
             rel="noopener noreferrer"
             className="flex-1 text-center text-sm px-3 py-2 bg-blue-500 dark:bg-gray-700 text-black font-semibold rounded-lg hover:bg-blue-600 transition"
             >
             Live Demo
-            </a>
+            </a> */}
            </div>
 
           </motion.div>
