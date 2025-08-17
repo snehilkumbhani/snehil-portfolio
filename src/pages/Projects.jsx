@@ -53,17 +53,20 @@ export default function Projects() {
       {/* --- Controls --- */}
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
         {/* Search */}
-        <input
+       <input
           type="text"
           placeholder="Search projects..."
           value={searchTerm}
           onChange={(e) => {
-            setSearchTerm(e.target.value);
+            etSearchTerm(e.target.value);
             setCurrentPage(1);
           }}
-          className="border rounded-xl px-4 py-2 w-full md:w-1/3"
-        />
-
+          className="border rounded-xl px-4 py-2 w-full md:w-1/3 
+             bg-white text-black 
+             dark:bg-gray-900 dark:text-white 
+             placeholder-gray-500 dark:placeholder-gray-400 
+             focus:outline-none focus:ring-2 focus:ring-blue-500"
+      />
         {/* Sort */}
         <select
           value={sortBy}
